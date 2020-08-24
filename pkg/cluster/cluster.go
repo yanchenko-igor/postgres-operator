@@ -573,7 +573,7 @@ func compareEnv(a, b []v1.EnvVar) bool {
 					}
 				}
 				if !equal {
-					return equal
+					return false
 				}
 			}
 		}
@@ -581,7 +581,7 @@ func compareEnv(a, b []v1.EnvVar) bool {
 			return false
 		}
 	}
-	return equal
+	return true
 }
 
 func compareSpiloConfiguration(configa, configb string) bool {
